@@ -6,10 +6,15 @@ public class NumberCount {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number to count : ");
         int n =sc.nextInt();
+        int temp=n;
         while (n!=0) {
-            n=n/10;
+            temp=temp/10;
             count++;
         }
-        System.out.println("the total number is : "+count);
+        
+        while (n!=0) {
+            n= (int)n/(10^(count-1));
+            System.out.println(n);
+        }
     }
 }
